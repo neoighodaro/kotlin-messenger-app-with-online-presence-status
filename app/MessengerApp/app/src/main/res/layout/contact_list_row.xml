@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="20dp"
+  android:gravity="center"
+  tools:context=".LoginActivity">
+
+  <ImageView
+    android:id="@+id/presenceImageView"
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    app:srcCompat="@drawable/presence_icon" />
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:text="Neo"
+    android:textSize="20sp"
+    android:layout_marginStart="10dp"
+    android:id="@+id/usernameTextView"
+    app:layout_constraintTop_toBottomOf="@+id/editTextUsername"
+    />
+
+</LinearLayout>
