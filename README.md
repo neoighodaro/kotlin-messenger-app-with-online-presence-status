@@ -1,5 +1,5 @@
 # Messenger App
-A messenger app for a user to chat with other users on the platform
+A messenger app for a user to chat with other users on the platform. [View tutorial](https://pusher.com/tutorials/android-messenger-presence-kotlin).
 
 ## Getting Started
 
@@ -28,5 +28,3 @@ You need the following installed:
 * [Kotlin](https://kotlinlang.org/) - Used to build the Android client
 * [Pusher](https://pusher.com/) - APIs to enable devs building realtime features
 * [Node](http://nodejs.org) - Used to build the server
-
-## Acknowledgments
