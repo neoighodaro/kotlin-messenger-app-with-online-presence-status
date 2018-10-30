@@ -14,15 +14,25 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
+override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_login)
+
+    if(PreferenceManager.getDefaultSharedPreferences(this).contains("USER")){
+      loginFunction(PreferenceManager.getDefaultSharedPreferences(this).getString("USER",""))
+    }
+
     loginButton.setOnClickListener {
       if (editTextUsername.text.isNotEmpty()) {
+
+        var pref = PreferenceManager.getDefaultSharedPreferences(this).edit()
+        pref.putString("USER",editTextUsername.text.toString())
+        pref.apply()
+
+
         loginFunction(editTextUsername.text.toString())
       }
     }
-
   }
 
   private fun loginFunction(name:String) {
