@@ -57,11 +57,11 @@ class ContactRecyclerAdapter(private var list: ArrayList<UserModel>, private var
       this.setOnClickListener {
         listener.onUserClicked(currentValue)
       }
-      nameTextView.text = currentValue.name
-      if (currentValue.online){
-        presenceImageView.setImageDrawable(this.context.resources.getDrawable(R.drawable.presence_icon_online))
+    nameTextView.text = currentValue.name
+      if (currentValue.online) {
+        presenceImageView.setImageDrawable(ContextCompat.getDrawable(this.context,R.drawable.presence_icon_online))
       } else {
-        presenceImageView.setImageDrawable(this.context.resources.getDrawable(R.drawable.presence_icon))
+        presenceImageView.setImageDrawable(ContextCompat.getDrawable(this.context,R.drawable.presence_icon))
 
       }
 
