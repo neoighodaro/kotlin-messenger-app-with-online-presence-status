@@ -15,7 +15,7 @@ var pusher = new Pusher({
   cluster: 'PUSHER_APP_CLUSTER'
 });
 
-mongoose.connect('mongodb://127.0.0.1/db');
+mongoose.connect('mongodb://127.0.0.1/db', { useNewUrlParser: true });
 
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
